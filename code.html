@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lời tri ân Thầy Cô</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: #333;
+    }
+    h1 {
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    button {
+      background-color: #ff7b00;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ff9d3a;
+      transform: scale(1.1);
+    }
+    #message {
+      margin-top: 30px;
+      font-size: 22px;
+      color: white;
+      font-style: italic;
+      text-align: center;
+      max-width: 600px;
+      transition: opacity 0.6s ease;
+      opacity: 0;
+    }
+    #message.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>💐 Tri ân Thầy Cô 💐</h1>
+  <button onclick="showMessage()">Nhấn để nhận lời cảm hứng</button>
+  <div id="message"></div>
+
+  <script>
+    function showMessage() {
+      const quotes = [
+        "Người thầy là ngọn hải đăng soi sáng hành trình tri thức của bao thế hệ.",
+        "Không có thầy cô, chúng ta không thể viết nên câu chuyện của chính mình.",
+        "Một lời dạy của thầy cô có thể thay đổi cả cuộc đời của một con người.",
+        "Công ơn thầy cô như trời biển – tri thức thầy cô trao là hành trang vững vàng nhất.",
+        "Thầy cô là người gieo hạt mầm ước mơ trong tâm hồn học trò."
+      ];
+      const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+      const messageDiv = document.getElementById("message");
+      messageDiv.innerText = randomQuote;
+      messageDiv.classList.add("show");
+    }
+  </script>
+</body>
+</html>
